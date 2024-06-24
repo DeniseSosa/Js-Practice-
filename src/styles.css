@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sahitya:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    text-align: center;
+    padding: .5rem;
+    font-weight: bolder;
+    
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-image: linear-gradient(135deg,#ff00d0, #9900ff);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.divList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+} 
+
+.rowInput{
+    background-color: rgb(250, 233, 250);
+    width: 100%;
+    max-width: 540px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+/* .labelText{
+    flex-direction: column;
+} */
+
+.rowInput button {
+    background-color: transparent;
+    border:none;
+    padding: 20px;
+}
+.rowInput img{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: -9px;
+    filter: drop-shadow(5px 5px 5px rgba(40, 40, 40, 0.5));
+}
+.inputTask{
+    width: 80%;
+    height: 30px;
+    padding: 10px;
+}
+.floatButton{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+.floatButton button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.floatButton img{
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    filter: drop-shadow(5px 5px 5px rgba(40, 40, 40, 0.5));
+    transform: scale();
+    transition: transform 1s;
+}
+.floatButton button :hover{
+    transform: scale(1.5);
+}
