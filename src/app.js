@@ -8,9 +8,13 @@ function addTask() {
     let li = document.createElement("li");
     li.innerHTML = inputTask.value;
     taskList.appendChild(li);
+    let span= document.createElement("span")
+    span.innerHTML= "❌"
+    li.appendChild(span)
   }
   inputTask.value = "";
 }
+
 
 inputTask.addEventListener("input", function () {
   filterInput = inputTask.value.toLowerCase();
@@ -23,5 +27,17 @@ inputTask.addEventListener("input", function () {
     }
   });
 });
+
+function searchTask (){
+  filterInput = inputTask.value.toLowerCase();
+  let itemsLi = taskList.getElementsByTagName("li");
+  Array.from(itemsLi).forEach((item) => {
+    if (item.textContent.toLowerCase().includes(filterInput)) {
+      item.style.display = "list-item";
+    } else {
+      item.style.display = "none";
+    }
+  })
+}
 
 

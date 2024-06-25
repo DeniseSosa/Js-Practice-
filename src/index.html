@@ -13,8 +13,8 @@
             <h1 class="title">To Do List 📚</h1>
     
             <div class="rowInput">
-                <input type="text" id="input-task" placeholder="ir al supermercado" class="inputTask">
-                <button onclick="addTask()"><img src="./img/search-img.png" alt="search"></button>
+                <input type="text" id="input-task" placeholder="burcar: ej ir al supermercado" class="inputTask">
+                <button onclick="searchTask()"><img src="./img/search-img.png" alt="search"></button>
             </div>
             <ul class="taskList" id="task-list">
                 <!-- <li></li>
@@ -24,6 +24,14 @@
         </div>
         <div class="floatButton">
             <button onclick="addTask()"><img src="./img/add-signal.png" alt="add task"></button>
+        </div>
+        <div class="formModal">
+            <form>
+                <h2>Add your Task Here</h2>
+                <textarea></textarea>
+                <button>Cancelar</button>
+                <button>Añadir</button>
+            </form>
         </div>
     </div>
 
