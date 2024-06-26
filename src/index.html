@@ -14,16 +14,19 @@
     
             <div class="rowInput">
                 <input type="text" id="input-task" placeholder="burcar: ej ir al supermercado" class="inputTask">
-                <button onclick="searchTask()"><img src="./img/search-img.png" alt="search"></button>
+                <button onclick="searchTask()"><img src="./img/svg/search.svg" alt="search"></button>
             </div>
             <ul class="taskList" id="task-list">
-                <!-- <li></li>
+                <!-- <li>
+                    //<span>
+                        //<button>
+                </li>
                 <li></li>
                 <li></li> -->
             </ul>
         </div>
         <div class="floatButton">
-            <button onclick="addTask()"><img src="./img/add-signal.png" alt="add task"></button>
+            <button onclick="addTask()"><img src="./img/svg/add-signal.svg" alt="add task"></button>
         </div>
         <div class="formModal">
             <form>
@@ -33,6 +36,13 @@
                 <button>Añadir</button>
             </form>
         </div>
+        
+        <div class="content-drop">
+            <div class="dropzone" id="dropzone">
+                <h2>Soltar aqui la tarea a posponer</h2>
+            </div>
+        </div>
+        
     </div>
 
 
