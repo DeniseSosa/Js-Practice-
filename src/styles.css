@@ -93,6 +93,7 @@ h1{
     background-color: rgb(246, 230, 248);
     border-radius: 10px;
     box-shadow: 5px 5px 10px #340131 ;
+    cursor: grab;
 }
 text{
     margin: 10px;
@@ -113,7 +114,7 @@ text{
 .toggle {
     text-decoration: line-through;
 }
-.button-cancel{
+.button-reload{
     height: 20px;
     width: 20px;
     margin: 5px;
@@ -141,7 +142,7 @@ text{
     justify-content: center;
     width: 100%;
     max-width: 540px;
-    height: 250px;
+    height: 200px;
     margin: 10px;
     padding: 20px;
     background-color:rgb(246, 230, 248);
@@ -154,6 +155,8 @@ text{
     margin: 10px;
     padding: 20px;
 }
-
+.hidden{
+    display: none;
+}
 
 
