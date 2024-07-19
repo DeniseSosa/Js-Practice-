@@ -2,13 +2,19 @@ const inputTask = document.getElementById("input-task");
 const taskList = document.getElementById("draggableUl"); // ul
 const dropZone = document.getElementById("dropzone");
 let originalIndexLi = {}
+const textareaTask= document.getElementById("textareaTask")
+
+const openModal= document.querySelector("#open-modal")
+const closeModal= document.querySelector("#close-modal")
+const modal = document.querySelector("#modal-container")
 
 function addTask() {
-  if (inputTask.value === "") {
+  console.log(textareaTask.value);
+  if (textareaTask.value === "") {
     alert("Debes escribir una tarea");
   } else {
     let li = document.createElement("li");
-    li.innerHTML = inputTask.value;
+    li.innerHTML = textareaTask.value;
     taskList.appendChild(li);
     li.classList.add("list"); ///Le agrego class="list" a <li>
 
@@ -63,9 +69,10 @@ function addTask() {
         sourceData= document.getElementById(getId)
         if(sourceData) dropZone.appendChild(sourceData)
       })
+      modal.classList.remove("mostrarModal")
   }
 
-  inputTask.value = "";
+  textareaTask.value = "";
 }
 
 
@@ -96,18 +103,21 @@ function searchTask() {
   localStorage.setItem(Array.from(itemsLi));
 }
 
-// // Selecciona todos los botones con la clase "span-button"
-// const buttons = document.querySelectorAll(".span-button");
 
-// // Itera sobre cada botón y agrega un evento click
-// buttons.forEach(button => {
-//   button.addEventListener(onclick, function() {
-//     // Encuentra el 'li' más cercano al botón clicado
-//     let li = button.closest("li");
+  openModal.addEventListener("click", function(event){
+   event.preventDefault()
+   modal.classList.add("mostrarModal")
+  })
 
-//     // Si se encontró el 'li', se elimina de su padre
-//     if (li) {
-//       li.parentNode.removeChild(li);
-//     }
-//   });
-// });
+  closeModal.addEventListener("click", function(event){
+    event.preventDefault()
+    modal.classList.remove("mostrarModal")
+   })
+
+const form = document.querySelector(".formModal")
+
+form.addEventListener("click", function(event){
+  event.preventDefault()
+})
+
+

@@ -26,20 +26,22 @@
             </ul>
         </div>
         <div class="floatButton">
-            <button onclick="addTask()"><img src="./img/svg/add-signal.svg" alt="add task"></button>
+            <button  id="open-modal"><img src="./img/svg/add-signal.svg" alt="add task"></button>
         </div>
-        <div class="formModal">
-            <form>
-                <h2>Add your Task Here</h2>
-                <textarea></textarea>
-                <button>Cancelar</button>
+        <div class="modalContainer" id="modal-container">
+            <form class="formModal">
+                <h2 class="subtitle-h2">Add your Task Here</h2>
+                <textarea class="textarea-modal" id="textareaTask"></textarea>
+                <div>
+                <button id="close-modal">Cancelar</button>
                 <button onclick="addTask()">Añadir</button>
+                </div>
             </form>
         </div>
         
         <div class="content-drop">
             <div class="dropzone" id="dropzone">
-                <h2>Tarea a Posponer!</h2>
+                <h2 class="subtitle-h2">Tarea a Posponer!</h2>
             </div>
         </div>
         
