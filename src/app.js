@@ -2,6 +2,7 @@ const inputTask = document.getElementById("input-task");
 const taskList = document.getElementById("draggableUl"); // ul
 const dropZone = document.getElementById("dropzone");
 let originalIndexLi = {}
+let listaStorage= []
 const textareaTask= document.getElementById("textareaTask")
 
 const openModal= document.querySelector("#open-modal")
@@ -17,6 +18,7 @@ function addTask() {
     li.innerHTML = textareaTask.value;
     taskList.appendChild(li);
     li.classList.add("list"); ///Le agrego class="list" a <li>
+    
 
     let uniqueId= Date.now()- (Math.floor(Math.random()*38476)+1000)
     li.setAttribute("id", uniqueId);
