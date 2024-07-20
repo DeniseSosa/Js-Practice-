@@ -69,7 +69,7 @@ function addTask() {
         sourceData= document.getElementById(getId)
         if(sourceData) dropZone.appendChild(sourceData)
       })
-      modal.classList.remove("mostrarModal")
+      modal.classList.remove("mostrarModal")  
   }
 
   textareaTask.value = "";
